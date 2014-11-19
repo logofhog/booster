@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+school_list = [
+  ['high school high', 'school in the city'],
+  ['another school', 'its in the country'],
+  ['magnet school', 'all magnets all the time']
+]
+
+school_list.each do |name, description|
+  School.create(name: name, description: description)
+end
+
+
