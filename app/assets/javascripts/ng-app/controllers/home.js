@@ -19,7 +19,7 @@ angular.module('Booster')
 angular.module('Booster')
   .directive('school', function(){
     return {
-      template: 'Name: {{school.name}}, description: {{school.description}}',
+      templateUrl: 'single_school.html',
       restrict: 'E',
       controller: function($scope) {
         $scope.schools = 'lasdasdasda';

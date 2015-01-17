@@ -1,4 +1,4 @@
-angular.module('Booster', ['ngRoute', 'templates'])
+angular.module('Booster', ['ngRoute', 'templates', 'mm.foundation'])
   .config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', { 

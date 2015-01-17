@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'bower-rails'
 gem 'angular-rails-templates', '~> 0.1.1'
+gem 'foreigner'
+gem 'angularjs-foundation-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -28,6 +30,7 @@ gem 'jquery-rails'
 #
 
 group :development, :test do
+  gem 'spork-rails'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'rails-assets-angular-mocks'

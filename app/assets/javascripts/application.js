@@ -15,5 +15,6 @@
 //= require angular
 //= require angular-route
 //= require angular-rails-templates
+//= require angular-mm-foundation
 //= require_tree ../templates
 //= require_tree .

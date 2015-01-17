@@ -4,8 +4,8 @@ describe School do
 
   before do
     @school = FactoryGirl.create :school
-    @wish_list =  FactoryGirl.create :wish_list
-    @school.wish_list = @wish_list
+    @team=  FactoryGirl.create :team
+    @school.teams << @team
   end
 
   it 'makes a school' do
@@ -13,6 +13,6 @@ describe School do
   end
 
   it 'can have a wish-list' do
-    expect(@school.wish_list).to be_a(WishList)
+    expect(@school.teams).to eq([@team])
   end
 end

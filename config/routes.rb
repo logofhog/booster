@@ -3,9 +3,15 @@ Booster::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'application#index'
+  root 'static_pages#index'
   get '*path' => 'application#index'
-  resources :schools 
+  resources :schools do
+    resources :teams do
+      resources :wish_lists do
+        resources :items
+      end
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

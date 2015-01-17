@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117154619) do
+ActiveRecord::Schema.define(version: 20150116201350) do
 
   create_table "items", force: true do |t|
     t.string   "name"
+    t.string   "url"
     t.integer  "price"
     t.integer  "wanted"
     t.integer  "bought"
@@ -30,11 +31,15 @@ ActiveRecord::Schema.define(version: 20141117154619) do
     t.datetime "updated_at"
   end
 
-  create_table "wish_lists", force: true do |t|
+  create_table "teams", force: true do |t|
+    t.string   "name"
     t.integer  "school_id"
-    t.string   "item"
-    t.integer  "bought"
-    t.integer  "wanted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wish_lists", force: true do |t|
+    t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
